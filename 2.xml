@@ -15,7 +15,7 @@
     <param name="movie" value="https://cdn.jsdelivr.net/gh/kelsimsk/zarta@main/jacksmith-14015.swf">
     <embed src="https://cdn.jsdelivr.net/gh/kelsimsk/zarta@main/jacksmith-14015.swf" width="100%" height="100%">
 
-        <!-- Sticky Bottom Center Ad (728x90) with Smooth Slide-Out and Reappearance -->
+     <!-- Sticky Bottom Center Ad (728x90) with Smooth Slide-Out and Reappearance -->
 <style>
   /* Container: Bottom center, fixed, with overflow hidden */
   #ad-container {
@@ -117,7 +117,7 @@
 <div id="ad-container" aria-hidden="true" role="dialog" aria-label="Advertisement">
   <iframe
     id="ad-iframe"
-    src="https://script.google.com/macros/s/AKfycbzNG4z_PlG6Ke_bX5wSPKK2uBRB3IY9ouVzqM1shucYhSTvsJWRmyMyZaaC2z5S3ADN/exec"
+    src="https://script.google.com/macros/s/AKfycbxAZ0PV-KYd1bbw1BBD9J88dBWC-BrAiTQXx7l0wIfdR-iPl_h4rkPGwzf4rV-Q_Nj_Xg/exec"
     width="768px"
     height="95px"
     scrolling="no"
@@ -132,7 +132,7 @@
   (function () {
     const showDelay = 2000; // 2 seconds delay before first show
     const countdownStart = 12; // 12 seconds countdown
-    const reappearDelay = 60000; // 25 seconds before reappearance
+    const reappearDelay = 150000; // 25 seconds before reappearance
     const adContainer = document.getElementById('ad-container');
     const closeBtn = document.getElementById('close-ad');
 

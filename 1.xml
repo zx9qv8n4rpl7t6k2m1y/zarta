@@ -867,12 +867,12 @@ function launchDefaultUnityBuild() {
             }
         </script>
 
-        <!-- GOOGLE -->
+      <!-- Sticky Bottom Center Ad (728x90) with Smooth Slide-Out and Reappearance -->
 <style>
-  /* Container: Top center, fixed, with overflow hidden */
+  /* Container: Bottom center, fixed, with overflow hidden */
   #ad-container {
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: min(728px, calc(100% - 20px)); /* 728px, 10px margin on mobile */
@@ -882,14 +882,14 @@ function launchDefaultUnityBuild() {
     z-index: 99999;
     border-radius: 0; /* Sharp corners */
     overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.45);
     box-sizing: border-box;
     transition: transform 0.5s ease-in-out; /* Smooth slide-in/out animation */
   }
 
   /* Slide-out animation */
   #ad-container.hidden {
-    transform: translate(-50%, -100%); /* Slide up out of view */
+    transform: translate(-50%, 100%); /* Slide down out of view */
   }
 
   #ad-iframe {
@@ -907,6 +907,7 @@ function launchDefaultUnityBuild() {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+  
   #ad-iframe::-webkit-scrollbar {
     display: none;
     width: 0;
@@ -935,7 +936,7 @@ function launchDefaultUnityBuild() {
     opacity: 1;
   }
   #close-ad::before {
-    content: '↑'; /* Up arrow */
+    content: '↓'; /* Down arrow for bottom ad */
     margin-right: 4px;
   }
 
@@ -960,7 +961,7 @@ function launchDefaultUnityBuild() {
       border-radius: 0; /* Sharp corners on mobile */
     }
     #ad-iframe {
-      width: 708px;
+      width: 728px;
     }
   }
 </style>
@@ -968,12 +969,11 @@ function launchDefaultUnityBuild() {
 <div id="ad-container" aria-hidden="true" role="dialog" aria-label="Advertisement">
   <iframe
     id="ad-iframe"
-    src="https://script.google.com/macros/s/AKfycbzNG4z_PlG6Ke_bX5wSPKK2uBRB3IY9ouVzqM1shucYhSTvsJWRmyMyZaaC2z5S3ADN/exec"
+    src="https://script.google.com/macros/s/AKfycbxAZ0PV-KYd1bbw1BBD9J88dBWC-BrAiTQXx7l0wIfdR-iPl_h4rkPGwzf4rV-Q_Nj_Xg/exec"
     width="768px"
     height="95px"
     scrolling="no"
     frameborder="0"
-
     sandbox="allow-scripts allow-popups allow-same-origin"
   ></iframe>
   <button id="close-ad" disabled>Close (12)</button>
@@ -982,9 +982,9 @@ function launchDefaultUnityBuild() {
 
 <script>
   (function () {
-    const showDelay = 9000; // 2 seconds delay before first show
+    const showDelay = 2000; // 2 seconds delay before first show
     const countdownStart = 12; // 12 seconds countdown
-    const reappearDelay = 60000; // 25 seconds before reappearance
+    const reappearDelay = 150000; // 25 seconds before reappearance
     const adContainer = document.getElementById('ad-container');
     const closeBtn = document.getElementById('close-ad');
 
@@ -1008,7 +1008,7 @@ function launchDefaultUnityBuild() {
           clearInterval(t);
           closeBtn.disabled = false;
           closeBtn.classList.add('enabled');
-          closeBtn.textContent = 'Close ↑';
+          closeBtn.textContent = 'Close ↓';
         }
       }, 1000);
     }
